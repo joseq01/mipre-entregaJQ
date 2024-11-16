@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+
+ <link rel="stylesheet" href="../estilos/style4.css">
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="../jota.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <div class="contenido">
+        <div class="item_1">   
+            <h2>Jugueteria</h2>
+            <h3>El Pirata</h3>
+            <img src="../assets/image/logopirata-removebg-preview.png" width="80"  height="80" alt="">
+           
+           
+        </div>
+        <div class="item_2">
+            
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <!-- <li><a href="../grid/page/compras.html"target="_self">Productos</a></li>               -->
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Sucursales </a></li>
+                <li><a href="../page/form.html">contactenos</a></li>
+              </ul>
+        </div>
+     <!-- /* finaliza menu */ -->
+
+     
+     <form action="https://formspree.io/f/mldenard" method="POST"> 
+ 
+     
+         <fieldset>
+ 
+             <legend>Ingrese sus datos</legend>
+ 
+             <p>
+ 
+             <label for="name">Nombre</label>
+             <input type="text"name="name" id="name" required minlength="3" maxlength="30">  
+            
+                         
+             <label for="lastname">Apellido</label>
+             <input type="text" name="lastname" id="lastname" required>
+             <br>
+             <br>
+
+             <label for="adreess">Direccion</label>
+             <INput type="text" name="adreess" id="adreess" ></INput> 
+             
+             <label for="codpos">C.P</label>
+             <INput type="text" name="codpos" id="codpos" maxlength="6"></INput>
+             
+
+             <label for="correo" email>Correo</label>
+             <input type="email" name="correo" id="correo" placeholder="usuario@mail.com"  >
+             
+ 
+             <label for="phone">Telefono</label>
+             <input type="text" name="phone" id="phone" placeholder="area - nro" pattern="[0-9]{3}-[0-9]{8}">
+                            
+ 
+             <label for="date">Fecha nacimiento</label>
+             <input type="date" name="date" id="date">
+             <br>
+             <br>
+
+             <label for="nivel">Nivel de estudios</label>
+             <input type="radio" name="nivel" id="1">Primario
+             <input type="radio" name="nivel" id="2">Secundario
+             <input type="radio" name="nivel" id="3">Terciario
+             <br>
+             <br>
+ 
+             <label for="ocupa">Ocupacion</label>
+             <select name="ocupa" id="ocupa">
+                 <option value="0"></option>
+                 <option value="1">Operario</option>
+                 <option value="2">Administrativo</option>
+                 <option value="3">Profesional</option>
+                 <option value="4">Otros</option>
+ 
+             </select>
+             <br>
+             <br>
+
+             <label for="Otros">Otros Idiomas</label>
+             <input type="checkbox" name="Ingles" value="Ingles" id="Otros">Ingles
+             <input type="checkbox" name="Frances" value="Frances" id="Otros">Frances
+             <input type="checkbox" name="Aleman" value="Aleman" id="Otros">Aleman
+             <br>
+             <br>
+             <label for="foto">Foto de Perfil</label>
+             <input type="file" name="foto" id="foto">
+             <br>
+             <br>
+             <label for=""></label>
+             <textarea name="" id="" cols="100" rows="5" placeholder="ingrese comentario"></textarea>
+             <br>
+ 
+         </p>
+ 
+         <p>
+             <input type="submit" value="Enviar">
+         </p>
+ 
+         </fieldset>
+
+    
+</body>
+</html>
