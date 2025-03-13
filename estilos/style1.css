@@ -1,199 +1,247 @@
-.root{
+ .root{
     margin: 0;
     padding: 0;
-}
+ }
 
-.contenido{
+ .contenido{
     background-color: azure;
     height: 100vh;
-        display: grid;
+    display: grid;
     /* grid-template-columns: repeat(2, 1fr); */
-    grid-template-areas: "header header"
-                          "navbar navbar"
-                          "Main Main"
-                          "Sidebar Sidebar"
-                          "footer footer";
+    grid-template-areas: "header "
+                          "navbar "
+                          "Main "
+                          "Menu2 "
+                          "footer ";
    
-    grid-template-rows: 12% 7% 40% 20% 10%;   
-
-}
-
-header h1{
-padding: 0;
-   font-family:Verdana, Geneva, Tahoma, sans-serif:
-}
-
-.item_1 {
-margin: 0;
-padding: 0;
-background-image: linear-gradient(to right top, #ba0fa6, #ff006d, #ff6528, #efaf00, #a8eb12);
-grid-column: 1/3;
-
-h3{
-    margin-top: 15px;
-    padding: 0 19% ;
-    font-family: "Doto", serif; 
-    margin-bottom: 0;
-    font-size: 40px; color: white;
-    margin-left: 100px;
-    float: left;
+    grid-template-rows: 12% 7% auto 30% 10%;   
+    grid-template-columns: 100%;
     
-}
+ }
 
-h2{ 
+ /* header h1{
+  grid-area: header ;
+  margin-top: 0;
+  padding: 0;
+  font-family:Verdana, Geneva, Tahoma, sans-serif:
+ } */
 
+ .item_1 {
+  grid-area: header;
+  margin-top: 0;
+  padding: 0;
+  background-image: linear-gradient(to right top, #ba0fa6, #ff006d, #ff6528, #efaf00, #a8eb12);
+ 
+ h3{
+     margin-top: 15px;
+     padding: 0 19% ;
+     font-family: "Doto", serif; 
+     margin-bottom: 30px;
+     font-size: 40px; color: white;
+     margin-left: 100px;
+     float: left;
+    }
+
+ h2{ 
      font-size: 30px;
      padding: 0 2%;
-     font-family: "Doto", serif; color: white;
-     
+     font-family: "Doto", serif; color: white;   
      float: left;
      font-weight:900
-     
-}
+  
+    }
 
-}
+        }
 
 .item_2 {
    
-    grid-area: navbar;
-    background-image: linear-gradient(to bottom, #c94ca4, #fa5183, #ff715a, #ff9f2f, #ebcd12);
+   grid-area: navbar;
+   background-image: linear-gradient(to bottom, #c94ca4, #fa5183, #ff715a, #ff9f2f, #ebcd12);
    
 
 ul li {
     list-style: none;
-    margin-left: 15px;
-    padding:0 70px ;
+    padding:0 85px ;
     float: left;
     font-family: Georgia, 'Times New Roman', Times, serif;  
+     }
 
-}
-ul li a{
+ ul li a{
     color: black;
     text-decoration:none;
-}
-    
-}
+    }
 
-.item_2 {
+        
+    .carrito{
+        position: absolute;   
+        margin-left: 60px;
+        /* background-color: black; */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        top: 90px;
+        left: 1090px;
+        margin-bottom: 0;                                         
+       }
+
+     .carr  {
+        position: absolute;
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        top: 80px;
+        left: 1170px;
+        margin-bottom: 0;
+       } 
+ }
+
  
-ul li :hover{
-    /* width: 100%; */
-    font-style: initial;
-    /* font-size: 96%; */
-    /* font-weight: bold; */
-    color:white
-}
-    
-}
 
-/* finaliza menu */
-
-section{
-    margin-top: 0px;
-    grid-column: 1/3;
-}
-
-.menu {
-    
-    width: 100%;
-    height: 440px;
-    border: 0.2px solid green;
-    margin-top: 65px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    
-
- div[class^="compra"] {
-         margin-left: 55px;
-         margin-right: 55px;
-         margin-bottom: 20px;
-         width: 150px;
-         height: 250px;
-         /* padding: 20px; */
-         border: 5px solid black               
-           
+  .item_2 {
+ 
+   ul li :hover{
+     font-style: initial;
+     color:white
+     }
 
 }
 
-.bootcomp a{
-    font-size: 15PX;
-    padding: 1px 7px; 0 4px
-    font-family:Verdana, Geneva, Tahoma, sans-serif
-     text-decoration: none;
-    color: white;
-    border: 5px solid black 
+
+/* Flecha izquierda */
+section {
+.arrow.left {
+   left: 30px;
+}
+/* Flecha derecha */
+.arrow.right {
+   right: 30px;
+} /* termina agregado flechas */
 }
 
-.compra{
-    background-image: url(../assets/image/soldjuguete.jpg);
-    width: 150px;
-    height: 250px;
-     background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-top: 30px;
-    
+.arrow.left{
+  /*  left: -25px; */
+  margin-left: -15px;
+   position: absolute;
+   margin-block-start: 5px;
+   background-color: rgba(255, 255, 255, 0.808);
+   z-index: 10; 
+
 }
-.compra1{
-    background-image: url(../assets/image/casabarbjuguete.avif);
-    width: 150px;
-    height: 250px;
-     background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    margin-top: 30px;
+
+.arrow.right{
+   position: absolute;
+  right: 10px; /* Coloca la flecha a 10px desde el borde derecho */
+  top: 50%; /* Coloca la flecha en el centro vertical de la pantalla */
+  transform: translateY(-50%); /* Ajusta la posición vertical para que esté centrada exactamente */
+  background-color: rgba(255, 255, 255, 0.808); 
+  padding: 10px; /* Espaciado dentro del icono */
+ 
+  z-index: 10; /* Para asegurarse de que el icono esté por encima de otros elementos */
+}
+.arrow {
+   background-color: transparent;
+   border: none;
+   font-size: 30px;
+   color: #333;
+   cursor: pointer;
+   padding: 10px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 10;
+  
   
 }
-.compra2{
-    background-image: url(../assets/image/spiderjuguete.webp);
-    width: 150px;
+
+.arrow:hover {
+   color: #007BFF;
+}/* termina agregado flechas */
+
+
+.menu {
+   margin-left: 20px;
+    grid-area: main;
+    width: 96%;
+    height: 309px;
+    /* border: 0.2px solid green; */
+    display: flex;
+    position: relative;
+    align-items: center;
+   overflow: hidden;
+    
+    
+ div[class^="compra"] {
+      margin-top: 15px;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-bottom: 10px;
+         /* width: 150px;
+         height: 250px; */
+      border: 5px solid black    
+   }
+
+ .compra{
+    width: 100%; 
     height: 250px;
-     background-size: cover;
+    min-width: 150px; /*probando */
+    background-size: cover;
     background-position: center;
+    position: relative; /*probando */
     border-radius: 10px;
-    margin-top: 30px;
-    
-}
+    overflow: hidden; /*probando */
+ }
 
-p{
-    
+  
+ .alin-producto{
     font-family:Impact, 
-    text-align: center ; 
+    display: flex;
+   justify-content:flex-end;
+    /* text-align: center ;  */
     font-style: 30px ; 
-    /* padding-top: 153px;   */
-    margin-block-start: 0;
-    margin-block-end: 10px;
+    margin-block-start: -200px;
+    margin-left: 5px;
+    position: absolute;
     background-color: rgba(255, 255, 255, 0.932);
-    
-    
-}
-
-
-
-.bootcomp :hover{
-   color: #a8eb12; 
    
-    
-}
-.bootcomp{
+       
+ }
 
-    h3 ::hover{
-        background-color: #fa5183;
-    }
-}
-
-h2{
-    font-size: 30px;
-    text-align: center ; 
-    margin-top: 0;
-    padding: 0;
-    margin-block-end: 155px;
-    /* padding-top: 153px;    */
-    background-color: rgba(255, 255, 255, 0.788);
+ .alin-precio {
+   
+   font-size: 30px;
+   text-align: center;
+   margin-block-start: -255px;
+   position: relative;
+   background-color: rgba(255, 255, 255, 0.788);
 }
 
-div[class^="bootcomp"] {
+.agregar-carrito {
+   position: absolute;
+ margin-top: 170px;
+}
+
+
+ .boton {
+    margin-left: 30px;
+    margin-bottom: 90px;
+    font-size: 15PX;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+     /* text-decoration: none; */
+    /* color: white;
+    border: 5px solid black  */
+ } 
+
+ 
+ div[class^="bootcomp"] {
     margin-left: 25px;
     margin-right: 53px;
     /* margin-bottom: 20px; */
@@ -202,21 +250,64 @@ div[class^="bootcomp"] {
     background-color: black;
     border: .5px solid black      
 
-}
+ }
 
-h3{
+
+ h3{
     font-size: 14px ;
     text-align: center ; 
     margin-top: 10PX;
     font-family: 'Courier New', Courier, monospace ; 
     color: white;
     
+ }
+
+  
 }
 
-.bootcomp{
-    border-radius: 8px;
-    
-}
+.cajacarrito {
+   grid-area: Menu2;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex ;
+   justify-content: center;
+   margin-top: 1rem;
+   table{
+      margin-top: 0.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      border-spacing: 5px;
+      table-layout: fixed;
+  
+  border-collapse: collapse;
+  border: 1px solid black;
+   }
+  
+    th {
+      padding-right: 30px;
+      padding-left: 5px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+   
+    tr {
+      padding: 0;
+      margin: 0;
 
+      #colcdad{
+         text-align: center;
+      }
+      #colcprec{
+         text-align: center;
+      }
+    }
+    td {
+      padding-right: 30px;
+      padding-left: 5px;
+      padding-top: 0;
+      padding-bottom: 0;
+
+    }
+        
 }
 

@@ -4,25 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>compras</title>
-    <link rel="stylesheet" href="/estilos/style1.css">
+    <link rel="stylesheet" href="../estilos/style1.css">
+    <link rel="stylesheet" href="../js/carrito.js">
     
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
    
    <link rel="shortcut icon" href="../jota.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
    
 </head>
 
 <body>
+
 
     <div class="contenido">
         <div class="item_1">   
             <h2>Jugueteria</h2>
             <h3>El Pirata</h3>
             <img src="../assets/image/logopirata-removebg-preview.png" width="80"  height="80" alt="">
-           
-           
+            
         </div>
         <div class="item_2">
             
@@ -32,51 +34,52 @@
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Sucursales </a></li>
                 <li><a href="../page/form.html">contactenos</a></li>
-              </ul>
+                <!-- <li><a href="../page/carrito.html">    -->
+                  <div class="carrito" >
+                  <!-- <img src="../assets/image/carrito-removebg-preview.png"   width="35"  height="35"  alt="carrito" >   -->
+                  <a href="../page/carrito.html"> <img src="../assets/image/carrito-removebg-preview.png"   width="35"  height="35"  alt="carrito" >  </a>
+                  </div>
+                  
+                
+            <!--  <p class="carr">0</p>  -->
+            </ul>
         </div>
-     <!-- /* finaliza menu */ -->
+     
+     <section>  
+    <!-- Flecha izquierda -->
+    <button class="arrow left">
+        <i class="fas fa-chevron-left"></i> <!-- Icono dflecha izquierda -->
+    </button>
 
-
-    <section>
-
-        <div class="menu">
-        <div class="compra">
-            <p>Soldadod Toy</p>
-            <h2>40usd</h2>
-
-            <div class="bootcomp">
-                <h3></h3>
-                <a href="../page/form.html">COMPRAR</a>
-            </div>
-
-        </div>
-
-        <div class="compra1">
-            
-            <p>Barbie ...</p>
-            <h2>55usd</h2>
-
-            <div class="bootcomp">
-               <h3></h3>
-               <a href="../page/form.html">COMPRAR</a>
-            </div>
-
-        </div>
-
-        <div class="compra2">
-            <p>Spideman ...</p>
-             <h2>45usd</h2>
-
-             <div class="bootcomp">
-                <h3></h3>
-                <a href="../page/form.html">COMPRAR</a>
-            </div>
-
-        </div>
-
+     <div class="menu">
+     
     </div>
 
-    </section>
+     <!-- Flecha derecha -->
+     <button class="arrow right">
+        <i class="fas fa-chevron-right"></i> <!-- Icono  flecha derecha -->
+     </button>
+    
+       </section>
+
+    <div class="cajacarrito">
+        </tr>
+        <table id="lista">
+
+        </table>
+    </div>
+
+
+
+    <script src="../js/carrito.js"> </script>
+
+    <script >
+   
+
+    </script>
+
+    
+   
 
 </body>
 
