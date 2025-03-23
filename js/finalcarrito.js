@@ -79,7 +79,7 @@ botonTarjeta.addEventListener('change', function() {
     if (botonTarjeta.checked) {
   const elementofrentetarjeta = document.createElement('div');
   mensajeFormaPago.style.marginTop = '-5%';
-  
+
   elementofrentetarjeta.innerHTML=  `
  <div id="tarjeta" class="tarjeta">
    <div class="frente">
@@ -248,12 +248,14 @@ botonTarjeta.addEventListener('change', function () {
   botonPagar.style.fontSize = "16px"; // Tamaño de la fuente
   botonPagar.style.transition = "background-color 0.4s"; // Tr
   botonPagar.style.opacity = "0.";
-
+ 
             } else {
                 botonPagar.setAttribute("disabled", "true"); // Deshabilitar botón
                 
-            }
+            } 
+     
         }
+
 
         // Escuchar eventos en los inputs
         numeroTarjeta.addEventListener("input", validarPago);
@@ -280,8 +282,8 @@ if (botonPagar) { // Asegurar que el botón existe
     modal.style.backgroundColor = "rgba(75, 69, 69, 0.5)";
     modal.style.alignItems = "center";
     modal.style.justifyContent = "center";
-
-    // Crear contenido del modal
+    
+     // Crear contenido del modal
     const modalContenido = document.createElement("div");
     modalContenido.style.background = "white";
     modalContenido.style.padding = "20px";
@@ -321,3 +323,24 @@ if (botonPagar) { // Asegurar que el botón existe
     });
 }
 
+window.addEventListener("resize", function () { //boton pagar reducir
+  const boton = document.getElementById("miBoton");
+  if (window.innerWidth <= 600) {
+    botonPagar.style.transform = "translateX(-50px)"; // Mueve el botón más a la izquierda
+  } else {
+    botonPagar.style.transform = "translateX(0)"; // Lo deja en su posición normal
+  }
+});
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth <= 700) {
+    botonPagar.style.transform = "translateX(-400px)"; // Mueve el botón a la izquierda
+  } else {
+    botonPagar.style.transform = "translateX(0)"; // Lo deja en su posición original
+  }
+});
+
+// Aplicar también el ajuste al cargar la página
+if (window.innerWidth <= 700) {
+  botonPagar.style.transform = "translateX(-400px)";
+}

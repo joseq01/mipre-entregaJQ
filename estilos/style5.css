@@ -280,13 +280,9 @@ ul li :hover{
 
 
 /* TABLET (768px - 1024px) */
-@media screen and (max-width: 1150px) {
-  .item_2 ul li {
-    padding: 0 70px;
-  }
-}
 
-@media screen and (max-width: 1100px) {
+
+@media screen and (max-width: 1150px) {
   .item_1{
     display: flex;
     justify-content: space-between;
@@ -307,22 +303,18 @@ ul li :hover{
   .item_2 ul {
     display: flex;
     justify-content: space-between;
-   
-  }
+   }
 
   .item_2 ul li {
     overflow: hidden;
     padding: 0 30px;
   }
 
-
   .section {
     display: flex;
     position: relative;
     font-size: 12px;
-   
   }
-
 
   #borrarCarrito {
     align-self: flex-start;
@@ -330,103 +322,182 @@ ul li :hover{
     margin-left: 40px;
     text-align: left;
   }
-}
- 
- 
 
-/* Ajustes para móviles (menores a 800px) */
-@media (max-width: 800px) {
-  .item_1{
-    display: flex;
+/* agregado */
+
+#boton-pagar {
+  margin-left: 0; /* Alinea a la izquierda */
+  width: 100%; /* Hace que ocupe todo el ancho */
+  text-align: center; /* Centra el texto dentro del botón */
+}
+
+.compra {
+  display: flex;
     justify-content: space-between;
+    flex-wrap: nowrap; /* Mantiene los elementos en una fila */
     width: 100%;
-  }
- 
-
-  .item_1 h2, .item_1 h3 {
-    font-size: 18px; /* Reducir tamaño en pantallas pequeñas */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 3px; /* Espaciado entre elementos */
-    white-space: nowrap; /* Evita que salten de línea */
-    overflow: hidden; /* Evita desbordes */
-    text-overflow: ellipsis; /* Agrega "..." si el texto es muy largo */
-    
-  }
-
-  .item_2 ul {
-   /*  display: flex;
-    flex-direction: column; /* Menú en columna */
-    padding: 0; 
-  }
-
-  .item_2 ul li {
-    margin: 5px 0;
-    text-align: center;
-  }
-
-    
-  #borrarCarrito {
-    margin-left: 2%;
-    text-align: left;
-  }
-
-  #tarjetaVirtual { 
-    margin-left: 400px;
-  }
-
-  [class^="tit-"] {
-    display: flex;
-    position: relative;
-    width: 20%;
-  }
-  
-  [class^="alin-"] {
-    display: flex;
-    position: relative;
-    width: 18%;
-  }
-
-  .compra {
-    display: flex;
-    position: relative;
-    width: 95%;
-    overflow: hidden; /* Evita desbordes */
-  }
-
-  * #tarjetaVirtual { 
-    overflow: hidden; /* Evita desbordes */
-  }
-  
-}
-
-/* Ajustes para móviles muy pequeños (menos de 400px) */
-@media (max-width: 600px) {
-  #borrarCarrito {
-    margin-bottom: -10%;
-    margin-left: 0; /* Pegado al borde izquierdo */
-  }
-
-   #seccionformadepago {
-    bottom: 0%;
+  overflow: hidden; /* Evita desbordes */
 }
 
 [class^="tit-"] {
+  flex: 1; /* Para que todos los cuadros ocupen el mismo ancho */
+  text-align: center; /* Centra el contenido */
+  font-size: 10px; /* Reducir tamaño si es necesario */
   overflow: hidden; /* Evita desbordes */
+  white-space: nowrap; /* Evita saltos de línea */
+  text-overflow: ellipsis; /* Añade "..." si el texto es muy largo */
+  width: 22.7%;
 }
+
 
 [class^="alin-"] {
   overflow: hidden; /* Evita desbordes */
 }
 
+.tit-magen{
+  width: 10%;
+}
+.tit-producto{
+  width: 58.5%;
+}
+.tit-precio{
+  width: 21%;
+}
+
+.tit-cantidad {
+  width:5% ;
+} /* titulo */
+
+}
+ 
+@media screen and (max-width: 1070px) {
+
+  .item_1 h2, .item_1 h3 {
+    font-size: 20px;
+  }
+
+  .tit-magen{
+    width: 9%;
+  }
+  .tit-precio{
+    width: 19%;
+  }
+  
+  * #tarjetaVirtual { 
+    margin-left: -350px;
+ }
+}
+
+
+/* Ajustes para móviles (menores a 400px) */
+@media (max-width: 400px) {
+  .item_1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+   }
+ 
+  .item_1 h2 {
+    font-size: 12px; /* Tamaño ajustado para móviles */
+  
+    word-break: break-word; /* Evita cortes abruptos */
+    overflow: visible; /* Evita que se oculte texto */
+    text-align: center; /* Asegura que el texto se centre */
+    max-width: 90%; /* Evita que ocupe todo el ancho */
+  }
+
+  .item_1 h3 {
+    font-size: 12px; /* Tamaño reducido */
+    text-align: center; /* Centra el texto */
+    width: 100%; /* Asegura que se extienda completamente */
+    margin-left: 10%;
+  }
+
+  .item_2 ul {
+   /*  display: flex;
+    flex-direction: column; /* Menú en columna */
+    padding: 0 ;
+  }
+
+  .item_2 ul li {
+    padding: 0;
+    text-align: center;
+    font-size: 9px;
+  }
+
+      
+  #borrarCarrito {
+    margin-left: 2%;
+    text-align: left;
+  }
+
+ 
+  [class^="tit-"] {
+    display: flex;
+    position: relative;
+    font-size: 9px; 
+    width: 20%;
+  }
+  
+  .tit-magen {
+    display: flex;
+    justify-content: left;   /* Centrado horizontal */
+    align-items: center;       /* Centrado vertical */
+    width: 70px;
+   
+}
+
+.alin-producto{
+  font-size: 16px;
+}
+.alin-precio {
+  font-size: 12px;
+}
+    
+ [class^="alin-"] {
+    display: flex;
+    position: relative;
+ }
+  
+.alin-producto{
+  width: 40%;
+}
+.tit-producto{
+  width: 33%;
+}
+.tit-precio{
+  width: 25%;
+}
+
+.alin-precio{
+  width: 20%;
+}
+.tit-precio{
+  width: 16%;
+}
+.tit-cantidad{
+  width: 13.5%;
+}
+
 .compra {
-  overflow: hidden; /* Evita desbordes */
+    display: flex;
+    position: relative;
+    width: 100%%;
+    overflow: hidden; /* Evita desbordes */
+ }
+  
 }
 
-* #tarjetaVirtual { 
-  display: none; /* Oculta la tarjeta completamente */
-}
+@media (max-width: 400px) and (orientation: portrait){
+  * #tarjetaVirtual { 
+  display: none;
+  width: 10%;
+ }
 
+ .item_1, .item_2 {
+  min-height: 70px; /* Mantiene la altura mínima */
+  width: 100vw; /* Asegura que ocupen todo el ancho */
+  flex-wrap: nowrap; /* Evita que los elementos se apilen */
 }
-
+}

@@ -76,7 +76,7 @@ function generarTarjetas() {
  
 }
 
-//prueba corre tarjetas
+
 // Seleccionamos el contenedor de las tarjetas y las flechas
 const cardsContainer = document.querySelector('.menu');
 const leftArrow = document.querySelector('.left');
@@ -138,9 +138,28 @@ agregaindice.appendChild(carr); // agrega class carr
    localStorage.setItem('tablasDatos', JSON.stringify(tablas));
    const recuperaTabla=JSON.parse(localStorage.getItem("tablasDatos"));
  
-  alert(`${producto.articulo} ha sido agregado al carrito.`);
-  insertartabla() //llama a la tabla
+  /* alert(`${producto.articulo} ha sido agregado al carrito.`);
+  insertartabla()  */
+  // Mostrar el mensaje flotante en pantalla
+  mostrarMensaje(`${producto.articulo} ha sido agregado al carrito.`);
+    
+  insertartabla(); // Llama a la tabla
 }
+
+// Función para mostrar el mensaje flotante modo prueba
+function mostrarMensaje(mensaje) {
+  let mensajeDiv = document.createElement('div');
+  mensajeDiv.classList.add('mensaje-flotante');
+  mensajeDiv.textContent = mensaje;
+  
+  document.body.appendChild(mensajeDiv);
+
+  // Desaparece después de 3 segundos
+  setTimeout(() => {
+      mensajeDiv.remove();
+  }, 5000); // Función para mostrar el mensaje flotante modo prueba
+}
+
 
 // Llamar a la función para generar las tarjetas cuando cargue la página
 document.addEventListener('DOMContentLoaded', generarTarjetas);
