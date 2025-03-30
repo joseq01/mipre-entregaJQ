@@ -416,12 +416,12 @@ ul li :hover{
 
 
 /* Ajustes para móviles (menores a 400px) */
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .item_1{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 30px;
+   
    }
  
   .item_1 h2 {
@@ -441,8 +441,7 @@ ul li :hover{
   }
 
   .item_2 ul {
-   /*  display: flex;
-    flex-direction: column; /* Menú en columna */
+    
     padding: 0 ;
   }
 
@@ -452,7 +451,7 @@ ul li :hover{
     font-size: 9px;
   }
 
-      
+        
   #borrarCarrito {
     margin-left: 2%;
     text-align: left;
@@ -515,7 +514,7 @@ ul li :hover{
   
 }
 
-@media (max-width: 400px) and (orientation: portrait){
+@media (max-width: 500px) and (orientation: portrait){
   * #tarjetaVirtual { 
   display: none;
   width: 10%;

@@ -381,15 +381,17 @@ background-position: center;
        min-height: 70px; /* Ajusta la altura para evitar que se achiquen */
        padding: 0 15px; /* Agrega un poco de espacio en los bordes */
        width: 100%;
+       flex-grow: 1;
      }
  
      .item_2 {
        
-       min-height: 30px; /* Mantiene la altura mínima */
+       min-height: 40px; /* Mantiene la altura mínima */
        justify-items: normal;
        align-items: center;
        width: 102.2%;
-      
+       flex-grow: 1; /* Permite que se expanda */
+      margin-top: 25px; 
       
      }
  

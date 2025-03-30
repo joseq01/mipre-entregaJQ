@@ -378,7 +378,7 @@ section {
  }
   
 
- @media (max-width: 800px) {
+ @media (max-width: 820px) {
 
 .item_1{
    min-height: 35px;
@@ -411,18 +411,21 @@ margin-left: -850px;
    .item_1 {
       display: flex;
       justify-content: space-between;
-      min-height: 70px; /* Ajusta la altura para evitar que se achiquen */
+      min-height: 90px; /* Ajusta la altura para evitar que se achiquen */
       padding: 0 15px; /* Agrega un poco de espacio en los bordes */
       width: 100%;
+      flex-grow: 1; /* Permite que se expanda */
     }
 
     .item_2 {
       
-      min-height: 30px; /* Mantiene la altura mínima */
+      min-height: 40px; /* Mantiene la altura mínima */
       justify-items: normal;
       align-items: center;
       width: 103.8%;
-      
+      flex-grow: 1; /* Permite que se expanda */
+      margin-top: 25px; /* Agrega separación entre item_1 y item_2 */
+
       .carrito {
          margin-left: -410px;
          }.carr{
