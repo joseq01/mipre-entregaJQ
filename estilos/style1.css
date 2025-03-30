@@ -176,8 +176,8 @@ section {
     display: flex;
     position: relative;
     align-items: center;
-   overflow: hidden;
-    
+    overflow: hidden;
+   white-space: nowrap; /* Evita que las tarjetas se apilen en columnas */  
     
  div[class^="compra"] {
       margin-top: 15px;
@@ -421,8 +421,8 @@ margin-left: -850px;
       min-height: 30px; /* Mantiene la altura mínima */
       justify-items: normal;
       align-items: center;
-      width: 105.5%;
-      margin-top: 25px;
+      width: 103.8%;
+      
       .carrito {
          margin-left: -410px;
          }.carr{
@@ -444,7 +444,7 @@ margin-left: -850px;
     .carrito {
       width: 1px;
       height: 1px;
-      margin-top: -20px;
+      margin-top: -5px;
     }
 
     .carr {
@@ -460,12 +460,12 @@ margin-left: -850px;
     .menu {
       margin-top: 20px; /* Ajusta la posición del menú */
       height: auto; /* Permite que el contenido se adapte mejor */
-      width: 100%;
+      
     }
  }
 
- /* Ajustes para móviles (menores a 400px) */
- @media (max-width: 400px) {
+ 
+ @media (max-width: 500px) {
    .item_1{
      display: flex;
      justify-content: space-between;

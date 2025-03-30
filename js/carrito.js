@@ -84,21 +84,14 @@ const rightArrow = document.querySelector('.right');
 let offset = 0;
 const itemWidth = 300;  // Incluye margen
 
-leftArrow.addEventListener('click', () => {
-    offset -= itemWidth+40;
-    if (offset < 0) offset = 0;
-    cardsContainer.style.transform = `translateX(-${offset}px)`;
-    cardsContainer.style.overflow = 'hidden';
+rightArrow.addEventListener('click', () => {
+  cardsContainer.scrollLeft += itemWidth + 40; // Mueve a la derecha
 });
 
-rightArrow.addEventListener('click', () => {
-    const maxOffset = cardsContainer.scrollWidth - cardsContainer.offsetWidth;
-    offset += itemWidth;
-    if (offset > maxOffset) offset = maxOffset;
-    cardsContainer.style.transform = `translateX(-${offset}px)`;
-    cardsContainer.style.overflow = 'visible';
+leftArrow.addEventListener('click', () => {
+  cardsContainer.scrollLeft -= itemWidth + 40; // Mueve a la izquierda
 });
-//prueba termina corre tarjetas
+//agregado 29
 
 
 // Función para agregar un producto al carrito

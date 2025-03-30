@@ -389,7 +389,7 @@ background-position: center;
        justify-items: normal;
        align-items: center;
        width: 102.2%;
-       margin-top: 25px;
+      
       
      }
  
@@ -428,7 +428,7 @@ background-position: center;
   }
  
   /* Ajustes para móviles (menores a 400px) */
-  @media (max-width: 400px) {
+  @media (max-width: 420px) {
     .item_1{
       display: flex;
       justify-content: space-between;
